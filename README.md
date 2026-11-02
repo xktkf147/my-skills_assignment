@@ -1,4 +1,4 @@
-# my-skills · lecture-notes
+# my-skills_assignment · lecture-notes
 
 긴 강의 자료를 **실무 핵심 개념 노트**로 정리해 주는 Claude Code 스킬입니다.
 
@@ -23,7 +23,7 @@
 ## 구조
 
 ```
-my-skills/
+my-skills_assignment/
 ├── README.md
 └── .claude/skills/lecture-notes/SKILL.md
 ```
@@ -33,7 +33,7 @@ my-skills/
 스킬을 쓸 프로젝트(적용 대상 프로젝트)에 스킬 폴더를 복사합니다.
 
 ```bash
-git clone https://github.com/xktkf147/my-skills.git
+git clone https://github.com/xktkf147/my-skills_assignment.git
 ```
 
 ```bash
@@ -41,7 +41,7 @@ mkdir -p <적용할-프로젝트>/.claude/skills
 ```
 
 ```bash
-cp -r my-skills/.claude/skills/lecture-notes <적용할-프로젝트>/.claude/skills/
+cp -r my-skills_assignment/.claude/skills/lecture-notes <적용할-프로젝트>/.claude/skills/
 ```
 
 모든 프로젝트에서 쓰려면 개인 스킬 폴더 `~/.claude/skills/`에 복사하면 됩니다.
