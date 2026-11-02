@@ -17,7 +17,7 @@
 ### 스킬로 해결한 방법
 `SKILL.md`에 정리 절차, 출력 형식, 작성 규칙, 점검표를 한 번만 적어 두었습니다.
 - 이제 원문을 붙여넣고 **"노트로 정리해 줘"** 한마디만 하면 스킬이 실행됩니다.
-- 모든 레슨 노트가 **같은 형식**으로 나옵니다: 한 줄 요약 → 주제별 섹션 → 핵심 용어표 → 실무 원칙 → 템플릿
+- 모든 레슨 노트가 **같은 형식**으로 나옵니다: 한 줄 요약 → 주제별 섹션 → 핵심 용어표 → 실무 원칙 → 템플릿 → 과제 메모(원문에 과제가 있을 때)
 - "원문에 없는 사실은 쓰지 않는다", "숫자·명령어는 바꾸지 않는다" 같은 규칙이 기본으로 적용될겁니다.
 
 ## 구조
@@ -30,9 +30,30 @@ my-skills_assignment/
 
 ## 설치 방법
 
+사용하는 곳에 따라 설치 방법이 다릅니다.
+
+| 사용하는 곳 | 설치 방법 |
+|---|---|
+| 브라우저 claude.ai 채팅 | 아래 **브라우저 (claude.ai)** — zip 업로드 |
+| VS Code·터미널의 Claude Code | 아래 **Windows** 또는 **Mac / Linux / Git Bash** — 개인 스킬 폴더에 복사 |
+
+### 브라우저 (claude.ai)
+
+설치 없이 업로드만 하면 모든 채팅에서 쓸 수 있습니다.
+
+1. 이 저장소의 `.claude/skills/lecture-notes` 폴더를 **폴더째 zip으로 압축**합니다. zip 안이 `lecture-notes/SKILL.md` 구조여야 합니다.
+2. claude.ai에서 **설정(Settings) → 기능(Capabilities) → 스킬(Skills)** 로 갑니다. 메뉴 이름은 바뀔 수 있습니다.
+3. **스킬 업로드**를 눌러 zip 파일을 그대로 올리고, 스킬을 켭니다.
+4. **새 채팅**을 열고 "요약"과 강의 원문을 함께 입력합니다.
+
+스킬 메뉴가 보이지 않으면 설정에서 코드 실행 기능을 먼저 켜야 할 수 있습니다.
+
+### 컴퓨터의 Claude Code (VS Code·터미널)
+
 개인 스킬 폴더(`~/.claude/skills/`)에 복사하면 **모든 프로젝트에서** 쓸 수 있습니다. 내 터미널에 맞는 명령을 차례대로 입력하세요.
 
-### Windows (PowerShell, VS Code 기본 터미널)
+
+#### Windows (PowerShell, VS Code 기본 터미널)
 
 ```powershell
 git clone https://github.com/xktkf147/my-skills_assignment.git
@@ -52,7 +73,7 @@ Copy-Item -Recurse -Force my-skills_assignment\.claude\skills\lecture-notes "$HO
 dir "$HOME\.claude\skills\lecture-notes"
 ```
 
-### Mac / Linux / Git Bash
+#### Mac / Linux / Git Bash
 
 ```bash
 git clone https://github.com/xktkf147/my-skills_assignment.git
@@ -90,6 +111,14 @@ cp -r my-skills_assignment/.claude/skills/lecture-notes ~/.claude/skills/
 - 결과 1: 스킬 이름을 따로 말하지 않았는데 `lecture-notes` 스킬이 자동으로 선택·실행되었습니다.
 - 결과 2: "한 줄 요약 → 개념별 섹션(정의·중요한 이유) → 토큰 비교표 → 핵심 용어표 → 실무 원칙" 형식의 노트가 나왔습니다.
 - 결과 3: 원문의 수치(에이전트 약 4배, 멀티 에이전트 약 15배)가 바뀌지 않고 그대로 유지되었습니다.
+
+### 브라우저(claude.ai)에서 확인
+
+zip으로 업로드한 뒤 **새 채팅**에서 "요약"과 모듈 06 강의 원문을 함께 입력했습니다.
+- 결과 1: 답하기 전에 업로드한 `lecture-notes` 스킬의 SKILL.md를 먼저 읽었습니다.
+- 결과 2: "한 줄 요약/기본 공식 → 주제별 섹션 → 핵심 용어표 → 실무 원칙 → 프롬프트·명령어 템플릿" 순서를 따랐습니다.
+- 결과 3: 비교 내용은 표로 바꿨고, 역사 일화(AutoGPT, Devin)는 교훈 한 줄로 줄였고, 출처 목록은 뺐고, 숫자·날짜·명령어는 원문 그대로 뒀습니다.
+- 결과 4: 원문에 과제가 있어 맨 끝에 과제 메모를 덧붙였습니다. 처음에는 스킬에 없던 동작이었는데, 유용해서 `과제 메모` 섹션을 정식 규칙으로 추가했습니다.
 
 ## 주의
 
