@@ -53,6 +53,7 @@ cp -r my-skills_assignment/.claude/skills/lecture-notes <적용할-프로젝트>
 
 - "이거 노트로 정리해 줘"
 - "핵심 개념만 함축해서 정리해 줘"
+- "요약" / "이거 요약해 줘"
 - `/lecture-notes` (직접 호출) 이게 더 편하지 않을까 싶습니다
 - /lecture-notes
   (강의 원문 붙여 넣기) 이런 식으로 사용하시면 됩니다.
