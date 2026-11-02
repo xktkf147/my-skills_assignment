@@ -30,7 +30,29 @@ my-skills_assignment/
 
 ## 설치 방법
 
-개인 스킬 폴더(`~/.claude/skills/`)에 복사하면 **모든 프로젝트에서** 쓸 수 있습니다. 아래 명령을 차례대로 입력하세요.
+개인 스킬 폴더(`~/.claude/skills/`)에 복사하면 **모든 프로젝트에서** 쓸 수 있습니다. 내 터미널에 맞는 명령을 차례대로 입력하세요.
+
+### Windows (PowerShell, VS Code 기본 터미널)
+
+```powershell
+git clone https://github.com/xktkf147/my-skills_assignment.git
+```
+
+```powershell
+New-Item -ItemType Directory -Force "$HOME\.claude\skills"
+```
+
+```powershell
+Copy-Item -Recurse -Force my-skills_assignment\.claude\skills\lecture-notes "$HOME\.claude\skills\"
+```
+
+설치 확인 (`SKILL.md`가 보이면 성공):
+
+```powershell
+dir "$HOME\.claude\skills\lecture-notes"
+```
+
+### Mac / Linux / Git Bash
 
 ```bash
 git clone https://github.com/xktkf147/my-skills_assignment.git
@@ -46,7 +68,7 @@ cp -r my-skills_assignment/.claude/skills/lecture-notes ~/.claude/skills/
 
 복사한 뒤에는 Claude Code를 다시 시작해야 스킬이 인식됩니다.
 
-- Windows(VS Code)라면 터미널을 **Git Bash**로 바꾼 뒤 입력하세요. PowerShell에서는 `mkdir -p`, `cp -r`이 다르게 동작합니다.
+- PowerShell에서는 `mkdir -p`, `cp -r`이 다르게 동작하니 위의 Windows용 명령을 쓰세요.
 - 특정 프로젝트에서만 쓰려면 `~/.claude/skills/` 대신 `<프로젝트 폴더>/.claude/skills/`에 복사하면 됩니다.
 
 ## 사용법 (호출 문장)
