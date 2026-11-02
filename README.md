@@ -52,9 +52,9 @@ cp -r my-skills_assignment/.claude/skills/lecture-notes <적용할-프로젝트>
 새 대화에서 강의 원문을 붙여넣고 아래처럼 말하면 됩니다.
 
 - "이거 노트로 정리해 줘"
-- "핵심 개념만 함축해서 정리해 줘"
-- "요약" / "이거 요약해 줘"
-- `/lecture-notes` (직접 호출) 이게 더 편하지 않을까 싶습니다
+- "핵심"
+- "요약"
+- `/lecture-notes` (직접 호출)
 - /lecture-notes
   (강의 원문 붙여 넣기) 이런 식으로 사용하시면 됩니다.
 
